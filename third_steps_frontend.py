@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtGui import *
 from PyQt6.QtCore import Qt
 import sys
+import sqlite3
 import threading
 
 
@@ -28,7 +29,7 @@ class ChatbotWindow(QMainWindow):
         self.page_number_input.setText("1")
         self.page_number_input.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.page_number_input.setFont(QFont("Arial", 14))
-        self.page_number_input.setGeometry(580, 10, 80, 40)
+        self.page_number_input.setGeometry(580, 10, 60, 40)
 
         # add the GO button
         self.go_button = QPushButton("GO", self)
@@ -65,6 +66,7 @@ class ChatbotWindow(QMainWindow):
         self.button.setGeometry(1200, 670, 80, 40)
 
         self.show()
+
 
 
 
